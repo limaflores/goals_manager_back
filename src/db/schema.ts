@@ -7,7 +7,7 @@ export const goals = pgTable('goals', {
     .$defaultFn(() => createId()),
   title: text('title').notNull(),
   desiredWeeklyFrequency: integer('desired_weekly_frequency').notNull(),
-  created_at: timestamp('created_at', { withTimezone: true })
+  createdAt: timestamp('created_at', { withTimezone: true })
     .notNull()
     .defaultNow(),
 })
